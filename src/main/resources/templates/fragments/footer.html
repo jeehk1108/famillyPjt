@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<!-- footer -->
+<div class="footer" th:fragment="footer">
+    <div class="container">
+        <div class="w3agile_footer_grids">
+            <div class="col-md-3 agileinfo_footer_grid">
+                <div class="agileits_w3layouts_footer_logo">
+                    <h5><a href="index.html">Venue</a></h5>
+                    <div class="agileinfo-social-grids">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 agileinfo_footer_grid">
+                <h3>Contact Info</h3>
+                <h4>Call Us <span>+1234 567 891</span></h4>
+                <p>My Company, 875 Jewel Road <span>8907 Ukraine.</span></p>
+            </div>
+            <div class="col-md-2 agileinfo_footer_grid agileinfo_footer_grid1">
+                <h3>Navigation</h3>
+                <ul class="w3layouts_footer_nav">
+                    <li><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
+                    <li><a href="gallery.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Gallery</a></li>
+                    <li><a href="icons.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Icons</a></li>
+                    <li><a href="codes.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Short Codes</a></li>
+                    <li><a href="contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 agileinfo_footer_grid">
+                <h3>Recent Posts</h3>
+                <div class="agileinfo_footer_grid_left">
+                    <a href="single.html"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="agileinfo_footer_grid_left">
+                    <a href="single.html"><img src="images/2.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="agileinfo_footer_grid_left">
+                    <a href="single.html"><img src="images/7.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="agileinfo_footer_grid_left">
+                    <a href="single.html"><img src="images/3.jpg" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="w3_agileits_footer_copy">
+        <div class="container">
+            <p>© 2017 Venue. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts.</a></p>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<script src="js/SmoothScroll.min.js"></script>
+
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+        */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

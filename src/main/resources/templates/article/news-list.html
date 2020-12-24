@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:replace="fragments/navi" :: navi></div>
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="w3layouts_breadcrumbs_left">
+            <ul>
+                <li><i class="fa fa-home" aria-hidden="true"></i><a href="/">Home</a><span>/</span></li>
+                <li><i class="fa fa-info-circle" aria-hidden="true"></i>News</li>
+            </ul>
+        </div>
+        <div class="w3layouts_breadcrumbs_right">
+            <h2>News</h2>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<!--&lt;!&ndash; gallery &ndash;&gt;-->
+<!--<div class="gallery">-->
+<!--    <div class="container">-->
+<!--        <div class="w3ls-gallery-grids">-->
+<!--            <div class="col-md-4 gal-grid">-->
+<!--                <div class="gal-img">-->
+<!--                    <a href="images/2.jpg" class="b-link-stripe b-animate-go  swipebox">-->
+<!--                        <div class="item item-type-double">-->
+<!--                            <div class="item-hover">-->
+<!--                                <div class="item-info">-->
+<!--                                    <div class="line"></div>-->
+<!--                                    <div class="headline">Venue</div>-->
+<!--                                    <div class="line"></div>-->
+<!--                                </div>-->
+<!--                                <div class="mask"></div>-->
+<!--                            </div>-->
+<!--                            <div class="item-img"><img src="images/2.jpg" alt=" " /></div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                    <p>Doloremque laudantium</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 gal-grid ">-->
+<!--                <div class="gal-img">-->
+<!--                    <a href="images/3.jpg" class="b-link-stripe b-animate-go  swipebox">-->
+<!--                        <div class="item item-type-double">-->
+<!--                            <div class="item-hover">-->
+<!--                                <div class="item-info">-->
+<!--                                    <div class="line"></div>-->
+<!--                                    <div class="headline">Venue</div>-->
+<!--                                    <div class="line"></div>-->
+<!--                                </div>-->
+<!--                                <div class="mask"></div>-->
+<!--                            </div>-->
+<!--                            <div class="item-img"><img src="images/3.jpg" alt=" " /></div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                    <p>Doloremque laudantium</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 gal-grid">-->
+<!--                <div class="gal-img">-->
+<!--                    <a href="images/6.jpg" class="b-link-stripe b-animate-go  swipebox">-->
+<!--                        <div class="item item-type-double">-->
+<!--                            <div class="item-hover">-->
+<!--                                <div class="item-info">-->
+<!--                                    <div class="line"></div>-->
+<!--                                    <div class="headline">Venue</div>-->
+<!--                                    <div class="line"></div>-->
+<!--                                </div>-->
+<!--                                <div class="mask"></div>-->
+<!--                            </div>-->
+<!--                            <div class="item-img"><img src="images/6.jpg" alt=" " /></div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                    <p>Doloremque laudantium</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 gal-grid gal-top">-->
+<!--                <div class="gal-img">-->
+<!--                    <a href="images/7.jpg" class="b-link-stripe b-animate-go  swipebox">-->
+<!--                        <div class="item item-type-double">-->
+<!--                            <div class="item-hover">-->
+<!--                                <div class="item-info">-->
+<!--                                    <div class="line"></div>-->
+<!--                                    <div class="headline">Venue</div>-->
+<!--                                    <div class="line"></div>-->
+<!--                                </div>-->
+<!--                                <div class="mask"></div>-->
+<!--                            </div>-->
+<!--                            <div class="item-img"><img src="images/7.jpg" alt=" " /></div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                    <p>Doloremque laudantium</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 gal-grid gal-top">-->
+<!--                <div class="gal-img">-->
+<!--                    <a href="images/8.jpg" class="b-link-stripe b-animate-go  swipebox">-->
+<!--                        <div class="item item-type-double">-->
+<!--                            <div class="item-hover">-->
+<!--                                <div class="item-info">-->
+<!--                                    <div class="line"></div>-->
+<!--                                    <div class="headline">Venue</div>-->
+<!--                                    <div class="line"></div>-->
+<!--                                </div>-->
+<!--                                <div class="mask"></div>-->
+<!--                            </div>-->
+<!--                            <div class="item-img"><img src="images/8.jpg" alt=" " /></div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                    <p>Doloremque laudantium</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 gal-grid gal-top">-->
+<!--                <div class="gal-img">-->
+<!--                    <a href="images/9.jpg" class="b-link-stripe b-animate-go  swipebox">-->
+<!--                        <div class="item item-type-double">-->
+<!--                            <div class="item-hover">-->
+<!--                                <div class="item-info">-->
+<!--                                    <div class="line"></div>-->
+<!--                                    <div class="headline">Venue</div>-->
+<!--                                    <div class="line"></div>-->
+<!--                                </div>-->
+<!--                                <div class="mask"></div>-->
+<!--                            </div>-->
+<!--                            <div class="item-img"><img src="images/9.jpg" alt=" " /></div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                    <p>Doloremque laudantium</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 gal-grid gal-top">-->
+<!--                <div class="gal-img">-->
+<!--                    <a href="images/10.jpg" class="b-link-stripe b-animate-go  swipebox">-->
+<!--                        <div class="item item-type-double">-->
+<!--                            <div class="item-hover">-->
+<!--                                <div class="item-info">-->
+<!--                                    <div class="line"></div>-->
+<!--                                    <div class="headline">Venue</div>-->
+<!--                                    <div class="line"></div>-->
+<!--                                </div>-->
+<!--                                <div class="mask"></div>-->
+<!--                            </div>-->
+<!--                            <div class="item-img"><img src="images/10.jpg" alt=" " /></div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                    <p>Doloremque laudantium</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 gal-grid gal-top">-->
+<!--                <div class="gal-img">-->
+<!--                    <a href="images/2.jpg" class="b-link-stripe b-animate-go  swipebox">-->
+<!--                        <div class="item item-type-double">-->
+<!--                            <div class="item-hover">-->
+<!--                                <div class="item-info">-->
+<!--                                    <div class="line"></div>-->
+<!--                                    <div class="headline">Venue</div>-->
+<!--                                    <div class="line"></div>-->
+<!--                                </div>-->
+<!--                                <div class="mask"></div>-->
+<!--                            </div>-->
+<!--                            <div class="item-img"><img src="images/2.jpg" alt=" " /></div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                    <p>Doloremque laudantium</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 gal-grid gal-top">-->
+<!--                <div class="gal-img">-->
+<!--                    <a href="images/3.jpg" class="b-link-stripe b-animate-go  swipebox">-->
+<!--                        <div class="item item-type-double">-->
+<!--                            <div class="item-hover">-->
+<!--                                <div class="item-info">-->
+<!--                                    <div class="line"></div>-->
+<!--                                    <div class="headline">Venue</div>-->
+<!--                                    <div class="line"></div>-->
+<!--                                </div>-->
+<!--                                <div class="mask"></div>-->
+<!--                            </div>-->
+<!--                            <div class="item-img"><img src="images/3.jpg" alt=" " /></div>-->
+<!--                        </div>-->
+<!--                    </a>-->
+<!--                    <p>Doloremque laudantium</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="clearfix"> </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; swipe box js &ndash;&gt;-->
+<!--        <script src="js/jquery.swipebox.min.js"></script>-->
+<!--        <script type="text/javascript">-->
+<!--            jQuery(function($) {-->
+<!--                $(".swipebox").swipebox();-->
+<!--            });-->
+<!--        </script>-->
+<!--        &lt;!&ndash; //swipe box js &ndash;&gt;-->
+
+<!--        <div class="clearfix"> </div>-->
+<!--    </div>-->
+</div>
+
+<div th:replace="fragments/footer :: footer" />
+<script>
+    $(document).ready(function(){
+        $(".news").addClass("active");
+    });
+</script>
+
+
+</body>
+</html>
+
