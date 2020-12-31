@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <style>
+        .fieldError {
+            border-color: #bd2130;
+        }
+        .fieldErrorFont {
+            color: #c11f2e;
+        }
+    </style>
+</head>
+<body>
+<div th:replace="fragments/navi" :: navi></div>
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="w3layouts_breadcrumbs_left">
+            <ul>
+                <li><i class="fa fa-home" aria-hidden="true"></i><a href="/">Home</a><span>/</span></li>
+                <li><i class="fa fa-info-circle" aria-hidden="true"></i>News</li>
+            </ul>
+        </div>
+        <div class="w3layouts_breadcrumbs_right">
+            <h2>News</h2>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!--container-->
+<!-- /container -->
+
+
+<div th:replace="fragments/footer :: footer" />
+<script>
+    $(document).ready(function(){
+        $(".news").addClass("active");
+
+        // (".submit-save").bind("click", function(){
+        //     location.href = "/news/write"
+        // });
+    });
+</script>
+
+
+</body>
+</html>
+

@@ -1,19 +1,18 @@
-package com.article.familly.domain;
+package com.article.family.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Entity
-public class Article {
+public class Article extends BaseTimeEntity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue // @GeneratedValue(strategy = GenerationType.AUTO)와 같다
     @Column(name = "article_id")
     private Long id;
 
@@ -25,6 +24,5 @@ public class Article {
     private String content;
     private int count;
     private String password;
-    private LocalDateTime registDate;
 
 }

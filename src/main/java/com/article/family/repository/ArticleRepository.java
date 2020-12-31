@@ -1,15 +1,11 @@
-package com.article.familly.repository;
+package com.article.family.repository;
 
-import com.article.familly.domain.Article;
+import com.article.family.domain.Article;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-import org.springframework.util.StringUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.*;
 
 @Repository
 @RequiredArgsConstructor

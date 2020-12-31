@@ -1,10 +1,10 @@
-package com.article.familly;
+package com.article.family;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FamillyApplicationTests {
+class FamilyApplicationTests {
 
 	@Test
 	void contextLoads() {

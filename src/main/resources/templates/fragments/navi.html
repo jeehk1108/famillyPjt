@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-</head>
-<body th:fragment="navi">
 <!-- banner -->
-<div class="banner">
+<div class="banner"  th:fragment="navi">
     <div class="header">
         <div class="container">
             <div class="header-left">
@@ -33,12 +30,12 @@
                         <ul class="nav navbar-nav">
                             <li><a href="/">홈 화면</a></li>
                             <li><a class="about" href="about.html">우리부부</a></li>
-                            <li><a class="gellery" href="/gellery">갤러리</a></li>
+                            <li><a class="gellery" href="/gellery/list">갤러리</a></li>
                             <li class="dropdown">
                                 <a href="codes.html" class="dropdown-toggle news" data-hover="Pages" data-toggle="dropdown">소식/이야기<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="/news">새소식</a></li>
-                                    <li><a href="/story">일상 이야기</a></li>
+                                    <li><a href="/news/list">새소식</a></li>
+                                    <li><a href="/story/list">일상 이야기</a></li>
                                 </ul>
                             </li>
                             <li><a class="calendar" href="contact.html">일정 캘린더</a></li>
@@ -51,5 +48,3 @@
         </div>
     </div>
 </div>
-</body>
-</html>

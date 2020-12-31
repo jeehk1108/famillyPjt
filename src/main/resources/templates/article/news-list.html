@@ -6,207 +6,76 @@
 <body>
 <div th:replace="fragments/navi" :: navi></div>
 <!-- breadcrumbs -->
-<div class="breadcrumbs">
-    <div class="container">
-        <div class="w3layouts_breadcrumbs_left">
-            <ul>
-                <li><i class="fa fa-home" aria-hidden="true"></i><a href="/">Home</a><span>/</span></li>
-                <li><i class="fa fa-info-circle" aria-hidden="true"></i>News</li>
-            </ul>
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="w3layouts_breadcrumbs_left">
+                <ul>
+                    <li><i class="fa fa-home" aria-hidden="true"></i><a href="/">Home</a><span>/</span></li>
+                    <li><i class="fa fa-info-circle" aria-hidden="true"></i>News</li>
+                </ul>
+            </div>
+            <div class="w3layouts_breadcrumbs_right">
+                <h2>News</h2>
+            </div>
+            <div class="clearfix"> </div>
         </div>
-        <div class="w3layouts_breadcrumbs_right">
-            <h2>News</h2>
-        </div>
-        <div class="clearfix"> </div>
     </div>
-</div>
-<!-- //breadcrumbs -->
-<!--&lt;!&ndash; gallery &ndash;&gt;-->
-<!--<div class="gallery">-->
-<!--    <div class="container">-->
-<!--        <div class="w3ls-gallery-grids">-->
-<!--            <div class="col-md-4 gal-grid">-->
-<!--                <div class="gal-img">-->
-<!--                    <a href="images/2.jpg" class="b-link-stripe b-animate-go  swipebox">-->
-<!--                        <div class="item item-type-double">-->
-<!--                            <div class="item-hover">-->
-<!--                                <div class="item-info">-->
-<!--                                    <div class="line"></div>-->
-<!--                                    <div class="headline">Venue</div>-->
-<!--                                    <div class="line"></div>-->
-<!--                                </div>-->
-<!--                                <div class="mask"></div>-->
-<!--                            </div>-->
-<!--                            <div class="item-img"><img src="images/2.jpg" alt=" " /></div>-->
-<!--                        </div>-->
-<!--                    </a>-->
-<!--                    <p>Doloremque laudantium</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4 gal-grid ">-->
-<!--                <div class="gal-img">-->
-<!--                    <a href="images/3.jpg" class="b-link-stripe b-animate-go  swipebox">-->
-<!--                        <div class="item item-type-double">-->
-<!--                            <div class="item-hover">-->
-<!--                                <div class="item-info">-->
-<!--                                    <div class="line"></div>-->
-<!--                                    <div class="headline">Venue</div>-->
-<!--                                    <div class="line"></div>-->
-<!--                                </div>-->
-<!--                                <div class="mask"></div>-->
-<!--                            </div>-->
-<!--                            <div class="item-img"><img src="images/3.jpg" alt=" " /></div>-->
-<!--                        </div>-->
-<!--                    </a>-->
-<!--                    <p>Doloremque laudantium</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4 gal-grid">-->
-<!--                <div class="gal-img">-->
-<!--                    <a href="images/6.jpg" class="b-link-stripe b-animate-go  swipebox">-->
-<!--                        <div class="item item-type-double">-->
-<!--                            <div class="item-hover">-->
-<!--                                <div class="item-info">-->
-<!--                                    <div class="line"></div>-->
-<!--                                    <div class="headline">Venue</div>-->
-<!--                                    <div class="line"></div>-->
-<!--                                </div>-->
-<!--                                <div class="mask"></div>-->
-<!--                            </div>-->
-<!--                            <div class="item-img"><img src="images/6.jpg" alt=" " /></div>-->
-<!--                        </div>-->
-<!--                    </a>-->
-<!--                    <p>Doloremque laudantium</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4 gal-grid gal-top">-->
-<!--                <div class="gal-img">-->
-<!--                    <a href="images/7.jpg" class="b-link-stripe b-animate-go  swipebox">-->
-<!--                        <div class="item item-type-double">-->
-<!--                            <div class="item-hover">-->
-<!--                                <div class="item-info">-->
-<!--                                    <div class="line"></div>-->
-<!--                                    <div class="headline">Venue</div>-->
-<!--                                    <div class="line"></div>-->
-<!--                                </div>-->
-<!--                                <div class="mask"></div>-->
-<!--                            </div>-->
-<!--                            <div class="item-img"><img src="images/7.jpg" alt=" " /></div>-->
-<!--                        </div>-->
-<!--                    </a>-->
-<!--                    <p>Doloremque laudantium</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4 gal-grid gal-top">-->
-<!--                <div class="gal-img">-->
-<!--                    <a href="images/8.jpg" class="b-link-stripe b-animate-go  swipebox">-->
-<!--                        <div class="item item-type-double">-->
-<!--                            <div class="item-hover">-->
-<!--                                <div class="item-info">-->
-<!--                                    <div class="line"></div>-->
-<!--                                    <div class="headline">Venue</div>-->
-<!--                                    <div class="line"></div>-->
-<!--                                </div>-->
-<!--                                <div class="mask"></div>-->
-<!--                            </div>-->
-<!--                            <div class="item-img"><img src="images/8.jpg" alt=" " /></div>-->
-<!--                        </div>-->
-<!--                    </a>-->
-<!--                    <p>Doloremque laudantium</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4 gal-grid gal-top">-->
-<!--                <div class="gal-img">-->
-<!--                    <a href="images/9.jpg" class="b-link-stripe b-animate-go  swipebox">-->
-<!--                        <div class="item item-type-double">-->
-<!--                            <div class="item-hover">-->
-<!--                                <div class="item-info">-->
-<!--                                    <div class="line"></div>-->
-<!--                                    <div class="headline">Venue</div>-->
-<!--                                    <div class="line"></div>-->
-<!--                                </div>-->
-<!--                                <div class="mask"></div>-->
-<!--                            </div>-->
-<!--                            <div class="item-img"><img src="images/9.jpg" alt=" " /></div>-->
-<!--                        </div>-->
-<!--                    </a>-->
-<!--                    <p>Doloremque laudantium</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4 gal-grid gal-top">-->
-<!--                <div class="gal-img">-->
-<!--                    <a href="images/10.jpg" class="b-link-stripe b-animate-go  swipebox">-->
-<!--                        <div class="item item-type-double">-->
-<!--                            <div class="item-hover">-->
-<!--                                <div class="item-info">-->
-<!--                                    <div class="line"></div>-->
-<!--                                    <div class="headline">Venue</div>-->
-<!--                                    <div class="line"></div>-->
-<!--                                </div>-->
-<!--                                <div class="mask"></div>-->
-<!--                            </div>-->
-<!--                            <div class="item-img"><img src="images/10.jpg" alt=" " /></div>-->
-<!--                        </div>-->
-<!--                    </a>-->
-<!--                    <p>Doloremque laudantium</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4 gal-grid gal-top">-->
-<!--                <div class="gal-img">-->
-<!--                    <a href="images/2.jpg" class="b-link-stripe b-animate-go  swipebox">-->
-<!--                        <div class="item item-type-double">-->
-<!--                            <div class="item-hover">-->
-<!--                                <div class="item-info">-->
-<!--                                    <div class="line"></div>-->
-<!--                                    <div class="headline">Venue</div>-->
-<!--                                    <div class="line"></div>-->
-<!--                                </div>-->
-<!--                                <div class="mask"></div>-->
-<!--                            </div>-->
-<!--                            <div class="item-img"><img src="images/2.jpg" alt=" " /></div>-->
-<!--                        </div>-->
-<!--                    </a>-->
-<!--                    <p>Doloremque laudantium</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="col-md-4 gal-grid gal-top">-->
-<!--                <div class="gal-img">-->
-<!--                    <a href="images/3.jpg" class="b-link-stripe b-animate-go  swipebox">-->
-<!--                        <div class="item item-type-double">-->
-<!--                            <div class="item-hover">-->
-<!--                                <div class="item-info">-->
-<!--                                    <div class="line"></div>-->
-<!--                                    <div class="headline">Venue</div>-->
-<!--                                    <div class="line"></div>-->
-<!--                                </div>-->
-<!--                                <div class="mask"></div>-->
-<!--                            </div>-->
-<!--                            <div class="item-img"><img src="images/3.jpg" alt=" " /></div>-->
-<!--                        </div>-->
-<!--                    </a>-->
-<!--                    <p>Doloremque laudantium</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="clearfix"> </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash; swipe box js &ndash;&gt;-->
-<!--        <script src="js/jquery.swipebox.min.js"></script>-->
-<!--        <script type="text/javascript">-->
-<!--            jQuery(function($) {-->
-<!--                $(".swipebox").swipebox();-->
-<!--            });-->
-<!--        </script>-->
-<!--        &lt;!&ndash; //swipe box js &ndash;&gt;-->
+    <!--container-->
+    <div class="container">
+        <h2 style="margin-top: 50px">새소식(news)</h2>
+        <div th:if="${articles.size()} != 0">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>카테고리</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="article : ${articles}">
+                    <td th:text="${article.id}"></td>
+                    <td th:text="${article.category}"></td>
+                    <td th:text="${article.title}" th:onclick="|javascript:pageView(${article.id})|" style="color:#337ab7; text-decoration:underline; font-weight:bold; cursor: pointer"></td>
+                    <td th:text="${article.name}"></td>
+                    <td th:text="${article.createdDate}"></td>
+                    <td th:text="${article.count}"></td>
+                </tr>
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-danger btn-lg text-center write_article"  style="margin-top: 30px">새 글쓰기</button>
+        </div>
+        <div th:unless="${articles.size()} != 0">
+            <hr>
+            <div style="margin-top: 200px; margin-bottom: 200px" class="text-center">
+                <p><strong>게시글이 존재하지 않습니다. 새 게시글을 등록해 주세요.</strong></p>
+                <button type="button" class="btn btn-danger btn-lg text-center write_article" style="margin-top: 50px">새 글쓰기</button>
+            </div>
+        </div>
 
-<!--        <div class="clearfix"> </div>-->
-<!--    </div>-->
+
+    </div> <!-- /container -->
+
 </div>
 
 <div th:replace="fragments/footer :: footer" />
 <script>
     $(document).ready(function(){
         $(".news").addClass("active");
+
+        $(".write_article").bind("click", function(){
+           location.href = "/news/write"
+        });
+
     });
+
+    function pageView(articleId){
+        location.href="/news/view/" + articleId;
+    }
+
 </script>
 
 

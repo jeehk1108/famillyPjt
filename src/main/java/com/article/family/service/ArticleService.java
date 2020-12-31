@@ -1,7 +1,7 @@
-package com.article.familly.service;
+package com.article.family.service;
 
-import com.article.familly.domain.Article;
-import com.article.familly.repository.ArticleRepository;
+import com.article.family.domain.Article;
+import com.article.family.repository.ArticleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,6 +36,15 @@ public class ArticleService {
      */
     public Article findOne(Long articleId) {
         return articleRepository.findOne(articleId);
+    }
+
+    /**
+     * 조회수 증가
+     */
+    @Transactional
+    public void countPlus(Long articleId, int count) {
+        Article article = articleRepository.findOne(articleId);
+        article.setCount(count);
     }
 
 }
