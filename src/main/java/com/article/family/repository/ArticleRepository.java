@@ -23,9 +23,16 @@ public class ArticleRepository {
     }
 
     //리스트 조회
-    public List<Article> findAll() {
+    public List<Article> findNewsAll() {
         //                                  JPQL              ,     반환타입
-        return em.createQuery("select a from Article a", Article.class)
+        return em.createQuery("select a from Article a where a.category = '소식' or a.category = '공지' order by a.id desc", Article.class)
+                .getResultList();
+    }
+
+    //스토리 리스트 조회
+    public List<Article> findStoryAll() {
+        //                                  JPQL              ,     반환타입
+        return em.createQuery("select a from Article a where a.category ='일상' or a.category = '정보' or a.category = '축하' order by a.id desc", Article.class)
                 .getResultList();
     }
 
@@ -33,6 +40,11 @@ public class ArticleRepository {
         return em.createQuery("select a from Article a where a.name =? 1", Article.class)
                 .setParameter(1 , name)
                 .getResultList();
+    }
+
+    public void delete(Long id) {
+        em.createQuery("delete from Article a where a.id =: id")
+                .setParameter("id", id);
     }
 
 

@@ -54,7 +54,7 @@ public class ArticleRepositoryTest {
         articleRepository.save(new Article());
 
         //when
-        List<Article> aritcles = articleRepository.findAll();
+        List<Article> aritcles = articleRepository.findNewsAll();
 
         //then
         Article article = aritcles.get(0);

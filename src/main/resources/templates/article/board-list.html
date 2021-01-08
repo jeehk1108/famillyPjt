@@ -1,10 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+<div th:replace="fragments/navi" :: navi></div>
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="w3layouts_breadcrumbs_left">
+            <ul>
+                <li><i class="fa fa-home" aria-hidden="true"></i><a href="/">Home</a><span>/</span></li>
+                <li><i class="fa fa-info-circle" aria-hidden="true"></i>Story</li>
+            </ul>
+        </div>
+        <div class="w3layouts_breadcrumbs_right">
+            <h2>Story</h2>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!--container-->
+<div class="container">
+    <h2 style="margin-top: 50px">일상 이야기(Story)</h2>
+    <div th:if="${articles.size()} != 0">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>카테고리</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회수</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="article : ${articles}">
+                <td th:text="${article.id}"></td>
+                <td th:text="${article.category}"></td>
+                <td th:text="${article.title}" th:onclick="|javascript:pageView(${article.id})|" style="color:#337ab7; text-decoration:underline; font-weight:bold; cursor: pointer"></td>
+                <td th:text="${article.name}"></td>
+                <td th:text="${#temporals.format(article.createdDate, 'yyyy-MM-dd a h시 m분')}"></td>
+                <td th:text="${article.count}"></td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-danger btn-lg text-center write_article"  style="margin-top: 30px">새 글쓰기</button>
+    </div>
+    <div th:unless="${articles.size()} != 0">
+        <hr>
+        <div style="margin-top: 200px; margin-bottom: 200px" class="text-center">
+            <p><strong>게시글이 존재하지 않습니다.</strong></p>
+            <button type="button" class="btn btn-danger btn-lg text-center write_article" style="margin-top: 50px">새 글쓰기</button>
+        </div>
+    </div>
+
+
+</div> <!-- /container -->
+
+</div>
+
+<div th:replace="fragments/footer :: footer" />
+<script>
+    $(document).ready(function(){
+        $(".news").addClass("active");
+
+        $(".write_article").bind("click", function(){
+            location.href = "/board/write"
+        });
+
+    });
+
+    function pageView(articleId){
+        location.href="/board/" + articleId;
+    }
+
+</script>
+
 
 </body>
 </html>
+

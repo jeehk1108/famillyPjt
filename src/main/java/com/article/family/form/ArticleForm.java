@@ -2,6 +2,7 @@ package com.article.family.form;
 
 import com.article.family.domain.ArticleCategory;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -30,7 +31,7 @@ public class ArticleForm {
     @Size(min=3, max=10, message = "3자이상 10자미만으로 설정해주세요.")
     private String password;
 
-    private LocalDateTime createdDate;
+    private String createdDate;
 
-    private LocalDateTime modifiedDate;
+    private String modifiedDate;
 }

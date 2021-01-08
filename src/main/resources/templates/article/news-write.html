@@ -28,7 +28,7 @@
         </div>
     </div>
     <!--container-->
-    <div class="container" style="width: 700px;">
+    <div class="container content-container" style="width: 700px;">
         <form role="form" action="/news/write" th:object="${articleForm}" method="post">
             <h2 style="margin-top: 50px">새소식(news) 글쓰기</h2>
             <hr>
@@ -40,11 +40,12 @@
             </div>
             <div class="form-group">
                 <label th:for="category">카테고리</label>
-                <select th:field="*{category}" class="form-control">
-                    <option value="">-------------------------------- 선택 --------------------------------</option>
+                <select th:field="*{category}" class="form-control categorySelect">
+                    <option value="">----------------- 카테고리를 선택해 주세요! -----------------</option>
                     <option th:each="status : ${T(com.article.family.domain.ArticleCategory).values()}"
                             th:value="${status}"
-                            th:text="${status}">
+                            th:text="${status}"
+                            th:id="${status}">
                     </option>
                 </select>
             </div>
@@ -69,7 +70,7 @@
 
             </div>
             <hr/>
-            <button type="button" class="btn btn-default btn-block"><i class="fa fa-list"></i> 목록 보기</button>
+            <button type="button" class="btn btn-default btn-block" onclick="listView();"><i class="fa fa-list"></i> 목록 보기</button>
             <button type="reset" class="btn btn-danger btn-block"><i class="fa fa-trash"></i> 초기화</button>
             <button type="submit" class="btn btn-primary btn-block submit-save" style="margin-bottom: 50px;"><i class="fa fa-save"></i> 글 저장</button>
         </form>
@@ -80,12 +81,29 @@
 <div th:replace="fragments/footer :: footer" />
 <script>
     $(document).ready(function(){
+        if(jQuery.browser.mobile == true) {
+            $(".content-container").css('width', '100%');
+        }
+
+        $(".categorySelect").children().remove('#일상');
+        $(".categorySelect").children().remove('#정보');
+        $(".categorySelect").children().remove('#축하');
+
         $(".news").addClass("active");
 
         // (".submit-save").bind("click", function(){
         //     location.href = "/news/write"
         // });
+
+        $(".listView").on(onclick, function(){
+           location.href = "/news/list";
+        });
+
     });
+
+    function listView(){
+        location.href = "/news/list";
+    }
 </script>
 
 

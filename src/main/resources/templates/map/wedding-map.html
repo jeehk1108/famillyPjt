@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:replace="fragments/navi" :: navi></div>
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="w3layouts_breadcrumbs_left">
+            <ul>
+                <li><i class="fa fa-home" aria-hidden="true"></i><a href="/">Home</a><span>/</span></li>
+                <li><i class="fa fa-info-circle" aria-hidden="true"></i>Map</li>
+            </ul>
+        </div>
+        <div class="w3layouts_breadcrumbs_right">
+            <h2>Map</h2>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!--container-->
+<div class="container map-container" style="margin-top: 50px; width: 60%;margin:0 auto;margin-top: 50px">
+    <div id="map" style="width:100%;height:400px;margin:0 auto;border: solid 1px gray"></div>
+<!--margin-left: 130px;-->
+    <div class="contactL" style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="inner">
+            <div class="hName">
+                <h3 class="en">S Convention</h3>
+                <h2>부천S컨벤션웨딩홀 오시는길</h2>
+            </div>
+            <div class="infoBox">
+                <div class="infoTit">
+<!--                    <div class="ico"><img src="/imgs/location/ico_subway2.png"></div>-->
+                    <h4 class="category-en" style="color:#337ab7; margin-top: 30px;">Subway 지하철 </h4>
+                </div>
+                <ul class="subway18">
+                    <li class="first last"><span class="subwayNum subway-line7">7호선</span> <strong>상동역 7번, 8번출구와 바로 연결</strong></li>
+                </ul>
+                <ul class="subway18">
+                    <li class="first last"><span class="subwayNum subway-line1">1호선</span> <strong>송내역 2번출구</strong></li>
+                </ul>
+                <ul class="disc4">
+                    <li class="first">버스로 15분정도 소요</li>
+                    <li class="last">송내역 버스노선 : 16, 37, 50-1, 83, 87</li>
+                </ul>
+            </div>
+            <div class="infoBox">
+                <div class="infoTit">
+<!--                    <div class="ico"><img src="/imgs/location/ico_bus2.png"></div>-->
+                    <h4 class="category-en" style="color:#337ab7; margin-top: 30px;">Bus 버스 </h4>
+                </div>
+                <ul class="subway18">
+                    <li class="first last"><strong>상동역,드림모아세이브존 하차</strong></li>
+                </ul>
+                <ul class="disc2">
+                    <li class="first last">5-4, 15, 23-2, 23-5, 50-1, 52, 59</li>
+                </ul>
+                <ul class="subway18">
+                    <li class="first last"><strong>상동역,홈플러스 하차</strong></li>
+                </ul>
+                <ul class="disc2">
+                    <li class="first last">1, 5-6, 6-2, 37, 50-1, 53, 59, 61, 66, 70, 87</li>
+                </ul>
+                <ul class="subway18">
+                    <li class="first last"><strong>광역버스</strong></li>
+                </ul>
+                <ul class="disc2">
+                    <li class="first last">9300(강남역), 8906(범계역), 8106(분당), 1001(고양교통)</li>
+                </ul>
+                <a href="https://map.naver.com/?perimeter=0&amp;lng=479b4a17ee995f7555bacd53c581b5e4&amp;pinId=13039482&amp;pinType=site&amp;dlevel=11&amp;lat=5a05b129cca1d57f9856133ca7c86816&amp;enc=b64" target="_blank" class="naverMap">네이버 실시간 버스노선&nbsp; →</a>
+            </div>
+            <div class="infoBox">
+                <div class="infoTit">
+<!--                    <div class="ico"><img src="/imgs/location/ico_car2.png"></div>-->
+                    <h4 class="category-en" style="color:#337ab7; margin-top: 30px;">Car 자가용 </h4>
+                </div>
+                <ul class="subway18">
+                    <li class="first last">네비게이션 : <strong>"세이브존 상동점"</strong> 또는 <strong>"부천시 원미구 상동 535-5"</strong> 입력</li>
+                </ul>
+                <ul class="disc2">
+                    <li class="first">명칭검색 : "세이브존 상동점" 또는 "부천S컨벤션웨딩홀" 입력</li>
+                    <li class="last">주소 : "부천시 원미구 길주로 105" 또는 "부천시 원미구 상동 535-5" 입력</li>
+                </ul>
+                <ul class="subway18">
+                    <li class="first last">판교방면에서 오실 경우</li>
+                </ul>
+                <ul class="disc2">
+                    <li class="first last">서울외곽순환고속도로 → 중동 IC 진출 후 시청, 시의회방면 우회전 → 상동역사거리 지난 후 무지개고가사거리에서 U턴 → 상동역방면으로 세이브존 7층</li>
+                </ul>
+                <ul class="subway18">
+                    <li class="first last">일산, 김포방면에서 오실 경우</li>
+                </ul>
+                <ul class="disc2">
+                    <li class="first last">서울외곽순환고속도로 → 중동 IC 진출 후 시청, 시의회방면 좌회전 → 상동역사거리 지난 후 무지개고가사거리에서 U턴 → 상동역방면으로 세이브존 7층</li>
+                </ul>
+                <a href="https://map.naver.com/?edid=13039482&amp;elng=479b4a17ee995f7555bacd53c581b5e4&amp;elat=5a05b129cca1d57f9856133ca7c86816&amp;eText=%EB%B6%80%EC%B2%9CS%EC%BB%A8%EB%B2%A4%EC%85%98%EC%9B%A8%EB%94%A9%ED%99%80&amp;eType=SITE_1" target="_blank" class="naverMap">네이버 빠른길 찾기&nbsp; →</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e6659d728859177a78027f8ca1d585db&libraries=services,clusterer,drawing"></script>
+<!-- /container -->
+
+</div>
+
+<div th:replace="fragments/footer :: footer" />
+
+
+<script>
+    $(document).ready(function(){
+        $(".map").addClass("active");
+
+        if(jQuery.browser.mobile == true) {
+            $(".map-container").css('width', '100%');
+        }
+    });
+
+    var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+    var options = { //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+        level: 4 //지도의 레벨(확대, 축소 정도)
+    };
+
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+        if(jQuery.browser.mobile == false) {
+
+            // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+            var mapTypeControl = new kakao.maps.MapTypeControl();
+
+            // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+            // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+            map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+            // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+            var zoomControl = new kakao.maps.ZoomControl();
+            map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+        }
+
+
+    // 주소-좌표 변환 객체를 생성합니다
+    var geocoder = new kakao.maps.services.Geocoder();
+
+    // 주소로 좌표를 검색합니다
+    geocoder.addressSearch('경기도 부천시 길주로 105', function(result, status) {
+
+        // 정상적으로 검색이 완료됐으면
+        if (status === kakao.maps.services.Status.OK) {
+
+            var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+            // 결과값으로 받은 위치를 마커로 표시합니다
+            var marker = new kakao.maps.Marker({
+                map: map,
+                position: coords
+            });
+
+            // 인포윈도우로 장소에 대한 설명을 표시합니다
+            var infowindow = new kakao.maps.InfoWindow({
+                content: '<div style="width:150px;text-align:center;padding:6px 0;">부천 S컨벤션웨딩홀</div>'
+            });
+            infowindow.open(map, marker);
+
+            // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+            map.setCenter(coords);
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
+

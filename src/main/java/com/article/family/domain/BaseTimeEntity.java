@@ -13,12 +13,12 @@ import java.time.LocalDateTime;
 @EntityListeners(AuditingEntityListener.class)
 public abstract class BaseTimeEntity {
 
-    @CreatedDate
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+    @CreatedDate
     private LocalDateTime createdDate;
 
-    @LastModifiedDate
     @DateTimeFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+    @LastModifiedDate
     private LocalDateTime modifiedDate;
 
     public LocalDateTime getCreatedDate() {
