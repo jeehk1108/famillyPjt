@@ -1,19 +1,38 @@
+#spring:
+#  datasource:
+#    url: jdbc:h2:tcp://localhost/~/family;
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    properties:
+#      hibernate:
+#        #        show_sql: true
+#        format_sql: true
+#
+#logging:
+#  level:
+#    org.hibernate.SQL: debug
+#    org.hibernate.type: trace
+
+
 spring:
+  profiles:
+    active: local # 기본 환경 선택
+
+# local 환경
+---
+spring:
+  profiles: local
   datasource:
-    url: jdbc:h2:tcp://localhost/~/family;
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
-
+    data: classpath:data-h2.sql # 시작할때 실행시킬 script
   jpa:
+    show-sql: true
     hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        #        show_sql: true
-        format_sql: true
-
-logging:
-  level:
-    org.hibernate.SQL: debug
-    org.hibernate.type: trace
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true

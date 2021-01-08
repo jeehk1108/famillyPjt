@@ -1,3 +1,16 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.9.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
+	}
+}
+
 plugins {
 	id 'org.springframework.boot' version '2.4.1'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
@@ -33,6 +46,9 @@ dependencies {
 
 	runtimeOnly 'com.h2database:h2'
 }
+
+//Spring Boot Overriding
+ext['hibernate.version'] = '5.2.11.Final'
 
 test {
 	useJUnitPlatform()
